@@ -4,14 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>age</title>
-    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
+    <div class="header" fragment="menu">
+        <header>
+            <div class="logo">
+                <a href="/"><img alt="mainlogo" src="/resources/img/mainlogo.png" id="mainlogo"></a>
+            </div>
+            
+            <div class="user" if="${session.user != null}">
+                [비회원 접속중]&emsp;
+                <a href="../user/mypage">MyPage</a> / &emsp;<a href="../logout">Logout</a>
+            </div>
+            <div class="user" unless="${session.user != null}">
+                <a href="../login">Login</a>
+            </div>
+            
+            <nav>
+                <ul class="navigation">
+                    <li><a href="/video">VIDEO</a></li>
+                    <li><a href="/list">BOARD</a></li>
+                    <li><a href="/mealkit/">MEALKIT</a></li>
+                    <li><a href="/health/healthMap">HEALTH</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+    
+	</div>
     <!-- 버튼을 클릭하면 calc()가 호출된다. -->
     <button class="btn" onclick="calc()">나이 계산</button>
     <button>
         <a href="/c.html">dd</a>
     </button>
     <div id="result" class="show">(결과값 표시)</div>   
+
+
+    <div fragment="footer">
+		<footer class="footer">
+		<hr>
+	    <div class="footerTitle">아보카도(AVOCADO Co., Ltd.)</div>
+	    <ul class="footerContent">
+	      <li>공동대표 : 강규석, 김나영, 선명진, 양혜영, 이지환, 이현수</li>
+	      <li>주소 : 경기도 성남시 분당구 분당로 263번길 24</li>
+	      <li>개인정보관리책임자 : 강규석(rbtjr1117@nate.com)</li>
+	    </ul>
+	    <div class="footerText">
+	      일부 게시물의 경우 주식회사 아보카도는 당사자가 아닌 단순 중개자로서 <br>
+	      해당 게시물의 기재된 가격, 위치, 영업 여부 등이 다를 수 있다는 점 알려드립니다. <br>
+	    </div>
+	    <div class="footerBot1">copyright (c) AVOCADO all rights reserved.</div><hr>
+	    <div class="footerBot2">AVOCADO 내 게시판 게시물의 저작권은 게시물 작성자에게 있습니다.<br>
+	      이러한 콘텐츠는 출처를 밝히고(copyright AVOCADO 표기) 비상업적 용도에서만 사용할 수 있습니다.<br><br>
+	      개인이 운영하는 업장에 심각한 피해를 줄 수 있는 악의적 의도로 게시판에 작성된 게시물은<br>
+	      예고조치 없이 <b>삭제</b>될 수 있습니다.</div>
+	  </footer>
 </body>
 </html>
