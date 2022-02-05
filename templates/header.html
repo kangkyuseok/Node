@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<style>
+		body {
+			width: 100%;
+			overflow-x:hidden;
+			overflow-y:auto;
+		}
+		a {
+			text-decoration:none;
+			color: #967B55;
+		}
+		a:hover {
+			color: #9ACF81;
+		}
+		.header {
+			width: 100%;
+			height: 80%;
+			margin: 30px;
+			font-family: 'Cinzel', serif;
+		}
+		.logo {
+			width: 95%;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			display: flex;
+			justify-content: center;
+		}
+		#mainlogo {
+			height: 150px;
+		}
+		.user {
+			width: 95%;
+			padding-right: 10px;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.user>a {
+			margin-right: 20px;
+		}
+		.navigation {
+			width: 94%;
+			height: 40px;
+			display: flex;
+			justify-content: space-around;
+			padding: 12px 15px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		.navigation>li {
+			list-style: none;
+			font-size: 20px;
+		}</style>
+<title>Header</title>
+</head>
+<body>
+<div class="header">
+	<header>
+		<div class="logo">
+			<a href="#"><img alt="mainlogo" src="/img/mainlogo.png" id="mainlogo"></a>
+		</div>
+		
+		
+		<nav>
+			<ul class="navigation">
+				<li><a href="/video">VIDEO</a></li>
+				<li><a href="/list">BOARD</a></li>
+				<li><a href="/mealkit/">MEALKIT</a></li>
+				<li><a href="/health/healthMap">HEALTH</a></li>
+			</ul>
+		</nav>
+	</header>
+</div>
+</body>
+</html>

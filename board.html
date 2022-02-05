@@ -3,12 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <title>아보카도</title>
-<link rel="stylesheet" href="/resources/css/header.css">
-<link rel="stylesheet" href="/resources/css/video.css">
-<link rel="stylesheet" href="/resources/css/footer.css">
+<style>
+	body {
+		width: 100%;
+		overflow-x:hidden;
+		overflow-y:auto;
+	}
+	a {
+		text-decoration:none;
+		color: #967B55;
+	}
+	a:hover {
+		color: #9ACF81;
+	}
+	.header {
+		width: 100%;
+		height: 80%;
+		margin: 30px;
+		font-family: 'Cinzel', serif;
+	}
+	.logo {
+		width: 95%;
+		padding-right: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		display: flex;
+		justify-content: center;
+	}
+	#mainlogo {
+		height: 150px;
+	}
+	.user {
+		width: 95%;
+		padding-right: 10px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.user>a {
+		margin-right: 20px;
+	}
+	.navigation {
+		width: 94%;
+		height: 40px;
+		display: flex;
+		justify-content: space-around;
+		padding: 12px 15px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.navigation>li {
+		list-style: none;
+		font-size: 20px;
+	}</style>
+<link rel="stylesheet" href="css/main.css">
+<style>
+body {
+width: 100%;
+overflow-x:hidden;
+overflow-y:auto;
+}
+.footer {
+font-size: 13px;
+margin-top: 10%;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+.footer>hr {
+border: 0.5px solid #967B55;
+}
+.footerTitle {
+font-size: 15px;
+}
+</style>
 </head>
 <body>
-	<div th:fragment="menu" th:replace="include/header :: menu"></div>
+	<div fragment="menu" replace="include/header :: menu"></div>
 	<div class="video">
 		<h2 style="color: #967B55;">VIDEO</h2>
 	</div>
@@ -20,11 +90,11 @@
 		
 		<nav>
 			<ul class="category">
-				<li id="category"><a th:href="@{/video}">전체</a></li>
-				<li id="category"><a th:href="@{/video?(category=홈트)}">홈트</a></li>
-				<li id="category"><a th:href="@{/video?(category=웨이트)}">웨이트</a></li>
-				<li id="category"><a th:href="@{/video?(category=요가)}">요가</a></li>
-				<li id="category"><a th:href="@{/video?(category=스트레칭)}">스트레칭</a></li>
+				<li id="category"><a href="@{/video}">전체</a></li>
+				<li id="category"><a href="@{/video?(category=홈트)}">홈트</a></li>
+				<li id="category"><a href="@{/video?(category=웨이트)}">웨이트</a></li>
+				<li id="category"><a href="@{/video?(category=요가)}">요가</a></li>
+				<li id="category"><a href="@{/video?(category=스트레칭)}">스트레칭</a></li>
 			</ul>
 		</nav>
 		<div class="videolist">
