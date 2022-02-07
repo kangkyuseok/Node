@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/header.css">
+<link rel="stylesheet" type="text/css" href="/css/video.css">
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
 <title>아보카도</title>
-<link rel="stylesheet" href="/resources/css/header.css">
-<link rel="stylesheet" href="/resources/css/video.css">
-<link rel="stylesheet" href="/resources/css/footer.css">
+
 </head>
+
 <body>
+	<div class="header">
+		<header>
+			<div class="logo">
+				<a href="#"><img alt="mainlogo" src="/img/mainlogo.png" id="mainlogo"></a>
+			</div>
+			
+			
+			<nav>
+				<ul class="navigation">
+					<li><a href="/v">VIDEO</a></li>
+					<li><a href="/board">BOARD</a></li>
+					<li><a href="/mealkit/">MEALKIT</a></li>
+					<li><a href="/health/healthMap">HEALTH</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
 	<div th:fragment="menu" th:replace="include/header :: menu"></div>
 	<div class="video">
 		<h2 style="color: #967B55;">VIDEO</h2>
@@ -82,7 +101,5 @@
 			</div>
 			</div><!--  thymeleaf Numbers 클래스를 이용하여 배열생성 #numbers.sequence -->
 	</div> <!-- container -->
-	
-	<div th:fragment="footer" th:replace="include/footer :: footer"></div>
 </body>
 </html>
